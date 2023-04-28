@@ -22,7 +22,11 @@ In this assignment, you must fill hw1.c and hw1.h with code which will:
 3.	cause the output of readelf -s hw1.o to have an identical number of symbol table entries as shown below (25 entries).
 4.	cause the output of readelf -s hw1.o to have identical values in the bold sections of the output below:
 You can perform the symbol table check by running make test within the hw1 directory. A full credit solution will have output that looks like:
+
+
 Symbol table ‘.symtab’ contains 25 entries:
+
+
 Num: Value            Size Type     Bind   Vis     Ndx Name
 0:   0000000000000000 0    NOTYPE   LOCAL  DEFAULT UND
 1:   0000000000000000 0    FILE     LOCAL  DEFAULT ABS hw1.c
@@ -49,6 +53,8 @@ Num: Value            Size Type     Bind   Vis     Ndx Name
 22:  0000000000000004 4    OBJECT   GLOBAL DEFAULT COM they_are_arbitrary
 23:  0000000000000010 8    OBJECT   GLOBAL DEFAULT 3   so_random
 24:  00000000000000d5 41   FUNC     GLOBAL DEFAULT 1   and_so_varied
+
+
 Hints:
 	Are you seeing puts instead of printf? Check the man pages for what the difference is, and make sure that the compiler can’t optimize away your call to printf. Remember, requirement #1 only mentions the first line of output.
 	The four digit numbers do not need to made identical, but you do need to make them show up. Keep experimenting with different variable types until you find how to create variables with periods and numbers on them.
